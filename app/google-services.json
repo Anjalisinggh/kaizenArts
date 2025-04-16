@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "267152018282",
+    "project_id": "kaizenarts-37f80",
+    "storage_bucket": "kaizenarts-37f80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267152018282:android:a4c074be185bee72f57313",
+        "android_client_info": {
+          "package_name": "com.example.kaizenarts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuGHmU65QBOs-G5GjhVlJUalfsBnLhB8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

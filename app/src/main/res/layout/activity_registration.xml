@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ww"
+    android:background="#F8D9CD"
     tools:context=".activites.registrationActivity">
 
     <!-- Title -->
@@ -31,7 +31,7 @@
         android:fontFamily="@font/aguafina_script"
         android:text="Kaizen Arts"
         android:textAlignment="center"
-        android:textColor="#E9568B"
+        android:textColor="#64515A"
         android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +95,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#EB6F99"
+        android:backgroundTint="#68565C"
         android:fontFamily="monospace"
         android:onClick="signup"
         android:padding="15dp"
@@ -129,7 +129,7 @@
         android:layout_marginTop="4dp"
         android:onClick="signin"
         android:text="LOGIN"
-        android:textColor="@color/pink"
+        android:textColor="#87757C"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

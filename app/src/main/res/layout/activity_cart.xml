@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B5828C"
+    android:background="@color/white"
     tools:context=".activites.cartActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#7E6262"
+        android:background="#FAD0C4"
         android:minHeight="?attr/actionBarSize"
         app:title="My cart"
         android:theme="?attr/actionBarTheme"/>
@@ -25,7 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="#D8C9F4"
+        android:background="#FFECEC"
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:padding="18dp"
@@ -57,7 +57,8 @@
         android:background="@color/purple_200"
         android:backgroundTint="@color/blue"
         android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
-        android:drawableTint="@color/white"
+        android:drawableTint="@color/black"
+        android:textColor="@color/black"
         android:padding="14dp"
         android:text="Buy Now"
         android:textAllCaps="false"

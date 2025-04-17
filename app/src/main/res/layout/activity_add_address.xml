@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@drawable/ww"
+
     tools:context=".activites.AddAddressActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -134,7 +134,7 @@
         android:text="Add Address"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="#FAD0C4"
         app:layout_constraintTop_toBottomOf="@id/textInputLayout7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

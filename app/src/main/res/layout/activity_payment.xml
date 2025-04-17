@@ -5,12 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D0ACAC"
+    android:background="@color/white"
     tools:context=".activites.PaymentActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/payment_toolbar"
-        android:background="#A04D4D"
+        android:background="#FAD0C4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,13 +25,13 @@
         android:layout_width="340dp"
         android:layout_height="244dp"
         android:layout_marginTop="16dp"
-        android:background="#D0ACAC"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@+id/payment_toolbar"
-        app:srcCompat="@drawable/img_7" />
+        app:srcCompat="@drawable/ecommerce" />
 
     <TextView
         android:id="@+id/textView12"

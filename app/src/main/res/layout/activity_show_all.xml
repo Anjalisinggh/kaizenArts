@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="#B5828C"
+    android:background="#F0D8D8"
     android:layout_height="match_parent"
     tools:context=".activites.ShowAllActivity">
 
@@ -15,14 +15,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/pink"
+        android:background="#FAD0C4"
 
         android:minHeight="?attr/actionBarSize"
         app:title="Welcome"
         android:theme="?attr/actionBarTheme"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="#B5828C"
+        android:background="#F8E5E5"
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"

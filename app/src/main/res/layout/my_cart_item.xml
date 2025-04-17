@@ -10,10 +10,11 @@
 
     <LinearLayout
         android:padding="7dp"
-        android:background="#8C5C62"
+        android:background="#E6B2BA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Current Date: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -35,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Current Date: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -52,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Current Time: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -62,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Current Time: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -79,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Product Name: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -89,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:maxLength="15"
                 android:text="Product Name: "
                 android:textSize="16sp"
@@ -107,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Product Price: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -118,7 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
 
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Product Price: "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -135,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Total Price "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -145,7 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Total price "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -162,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Total Quantity "
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -172,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
                 android:text="Total Quantity"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -181,11 +182,11 @@
                 android:id="@+id/remove_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#A04343"
+                android:backgroundTint="#C599B6"
                 android:text="Remove"
-                android:textStyle="bold"
+
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />

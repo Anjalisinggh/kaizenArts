@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#E5989B"
+    android:background="#BBFDDFDF"
     tools:context=".activites.DetailedActivity">
 
     <!-- Product Image -->
@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Product Detailed"/>
+        app:title="Product Details"/>
 
     <!-- Product Card -->
     <androidx.cardview.widget.CardView
@@ -44,9 +44,9 @@
         app:layout_constraintTop_toBottomOf="@+id/detailed_img">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#A77989"
+            android:layout_width="409dp"
+            android:layout_height="250dp"
+            android:background="#E6B2BA"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -69,7 +69,7 @@
 
             <TextView
                 android:id="@+id/detailed_desc"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:text="Gold-Toned Contemporary Drop Earrings" />
@@ -78,18 +78,18 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginLeft="108pt"
-                android:layout_marginTop="12dp">
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
                     android:text="4.0"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:layout_marginEnd="8dp" />
+                    android:textSize="16sp" />
 
                 <RatingBar
                     android:id="@+id/my_rating"
@@ -97,8 +97,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:isIndicator="true"
-                    android:paddingTop="1dp"
                     android:numStars="5"
+                    android:paddingTop="1dp"
                     android:stepSize="0.1" />
             </LinearLayout>
 
@@ -137,11 +137,11 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/add_item"
+                    android:id="@+id/remove_item"
                     android:layout_width="20dp"
                     android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
-                    android:src="@drawable/plusicon" />
+                    android:src="@drawable/iconminus" />
 
                 <TextView
                     android:id="@+id/quantity"
@@ -152,11 +152,11 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/remove_item"
+                    android:id="@+id/add_item"
                     android:layout_width="20dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="8dp"
-                    android:src="@drawable/iconminus" />
+                    android:src="@drawable/plusicon" />
             </LinearLayout>
 
 
@@ -169,11 +169,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/mycart"
-        android:drawableTint="@color/white"
+        android:drawableTint="@color/black"
         android:padding="14dp"
         android:text="Add to Cart"
-        android:background="@color/pink"
+        android:background="@color/black"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buy_now"
@@ -186,9 +187,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
-        android:drawableTint="@color/white"
+        android:drawableTint="@color/black"
         android:padding="14dp"
         android:text="Buy Now"
+        android:textColor="@color/black"
         android:background="@color/blue"
         android:textAllCaps="false"
         android:textStyle="bold"

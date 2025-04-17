@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#F8EDED"
     tools:context=".activites.PaymentActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -25,7 +25,7 @@
         android:layout_width="340dp"
         android:layout_height="244dp"
         android:layout_marginTop="16dp"
-        android:background="@color/white"
+        android:background="#F8EDED"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +40,7 @@
         android:layout_marginStart="84dp"
         android:text="Subtotal"
         android:textSize="18sp"
+        android:textColor="#000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -49,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Discount"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView12"
@@ -61,6 +63,7 @@
         android:layout_marginTop="12dp"
         android:text="Shipping"
         android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -71,6 +74,7 @@
         android:layout_marginEnd="84dp"
         android:text="Rs 0"
         android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -81,6 +85,7 @@
         android:layout_marginTop="12dp"
         android:text="Rs 0"
         android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/sub_total"
         app:layout_constraintStart_toStartOf="@+id/sub_total"
         app:layout_constraintTop_toBottomOf="@+id/sub_total" />
@@ -91,6 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Rs 0"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView17"
         app:layout_constraintStart_toStartOf="@+id/textView17"
@@ -113,6 +119,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="18dp"
         android:text="Total"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider5" />
 
@@ -122,6 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="76dp"
+        android:textColor="@color/black"
         android:text="Rs 00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider5" />

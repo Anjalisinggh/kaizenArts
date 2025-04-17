@@ -5,12 +5,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:padding="5dp"
+    android:background="#FFFFFF"
     app:cardCornerRadius="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#735258">
+        android:background="#F9F5F0">
 
         <ImageView
             android:id="@+id/new_img"
@@ -27,11 +28,11 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#FFB4A2"
+            android:background="#F66F6F"
             android:fontFamily="@font/poppins"
             android:padding="6dp"
             android:text="New"
-            android:textColor="@color/white"
+            android:textColor="#FFFFFF"
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/new_img"
@@ -49,7 +50,7 @@
             android:text="Product Name"
             android:textSize="17sp"
             android:maxLength="7"
-            android:textColor="#E6DDDD"
+            android:textColor="#1E1E1E"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/new_img" />
@@ -67,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:text=" ₹ "
-                android:textColor="#fff"
+                android:textColor="#212322"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:text="90"
-                android:textColor="#fff"
+                android:textColor="#242624"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/dollar"

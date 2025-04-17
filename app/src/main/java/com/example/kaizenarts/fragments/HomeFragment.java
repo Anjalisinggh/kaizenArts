@@ -162,7 +162,9 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupPopularProductsRecyclerView() {
-        popularRecycleview.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        popularRecycleview.setLayoutManager(layoutManager);
+
         popularProductsmodelList = new ArrayList<>();
         popularProductsAdapter = new PopularProductsAdapter(getContext(), popularProductsmodelList);
         popularRecycleview.setAdapter(popularProductsAdapter);
@@ -171,6 +173,7 @@ public class HomeFragment extends Fragment {
                 .get()
                 .addOnCompleteListener(task -> handlePopularProductsResult(task));
     }
+
 
     private void handlePopularProductsResult(Task<QuerySnapshot> task) {
         if (task.isSuccessful()) {

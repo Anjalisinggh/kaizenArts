@@ -25,7 +25,7 @@
                 android:id="@+id/item_image"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/ic_launcher_foreground" />
 
 
@@ -35,18 +35,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:maxLength="15"
+                android:maxLength="19"
                 android:textColor="@color/black"
                 android:text="Woman T shirt"
-                android:fontFamily="@font/amethysta"/>
+                android:fontFamily="@font/poppins"/>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:orientation="horizontal"
+               android:layout_gravity="left"
+               >
             <TextView
                 android:textColor="#15121D"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/poppins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="RS " />
+            <TextView
+                android:textColor="#15121D"
+                android:fontFamily="@font/poppins"
                 android:id="@+id/item_cost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:text="$ 34.0" />
+                android:text=" 34.0" />
+           </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

@@ -48,7 +48,7 @@
             android:fontFamily="@font/poppins"
             android:gravity="center"
             android:text="Product Name"
-            android:textSize="17sp"
+            android:textSize="14sp"
             android:maxLength="7"
             android:textColor="#1E1E1E"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +69,8 @@
                 android:fontFamily="@font/poppins"
                 android:text=" ₹ "
                 android:textColor="#212322"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="14sp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
@@ -83,8 +83,8 @@
                 android:fontFamily="@font/poppins"
                 android:text="90"
                 android:textColor="#242624"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="14dp"
+
                 app:layout_constraintBottom_toBottomOf="@+id/dollar"
                 app:layout_constraintStart_toEndOf="@+id/dollar"
                 app:layout_constraintTop_toTopOf="@+id/dollar" />

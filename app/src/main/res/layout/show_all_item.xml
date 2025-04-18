@@ -19,7 +19,7 @@
             android:padding="15dp"
 
             android:orientation="vertical"
-            android:background="#EDEDED">
+            android:background="#F8E5E5">
 
             <ImageView
                 android:id="@+id/item_image"
@@ -28,14 +28,7 @@
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/ic_launcher_foreground" />
 
-            <TextView
-                android:textColor="#15121D"
-                android:fontFamily="@font/amethysta"
-                android:id="@+id/item_cost"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text="$ 34.0" />
+
 
             <TextView
                 android:id="@+id/item_nam"
@@ -46,6 +39,14 @@
                 android:textColor="@color/black"
                 android:text="Woman T shirt"
                 android:fontFamily="@font/amethysta"/>
+            <TextView
+                android:textColor="#15121D"
+                android:fontFamily="@font/amethysta"
+                android:id="@+id/item_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="$ 34.0" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

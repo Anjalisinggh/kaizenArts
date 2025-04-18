@@ -162,8 +162,9 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupPopularProductsRecyclerView() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.VERTICAL, false);
         popularRecycleview.setLayoutManager(layoutManager);
+
 
         popularProductsmodelList = new ArrayList<>();
         popularProductsAdapter = new PopularProductsAdapter(getContext(), popularProductsmodelList);

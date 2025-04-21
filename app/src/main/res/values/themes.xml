@@ -2,7 +2,7 @@
     <!-- Base application theme -->
     <style name="Base.Theme.KaizenArts" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary Colors -->
-        <item name="colorPrimary">#FAD0C4</item>
+        <item name="colorPrimary">#E69DB8</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
 

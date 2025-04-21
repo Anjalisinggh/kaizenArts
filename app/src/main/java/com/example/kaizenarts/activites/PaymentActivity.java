@@ -110,6 +110,6 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
 
     @Override
     public void onPaymentError(int i, String s) {
-        Toast.makeText(this, "Payment Failed: " + s, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Payment Failed: " , Toast.LENGTH_SHORT).show();
     }
 }

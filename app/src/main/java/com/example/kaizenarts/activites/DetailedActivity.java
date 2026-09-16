@@ -65,7 +65,6 @@ public class DetailedActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.detailed_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -219,6 +218,21 @@ public class DetailedActivity extends AppCompatActivity {
                 totalQuantity--;
                 quantity.setText(String.valueOf(totalQuantity));
             }
+        });
+
+        findViewById(R.id.try_on_button).setOnClickListener(v -> {
+            Intent intent = new Intent(DetailedActivity.this, TryOnActivity.class);
+            intent.putExtra("product_name", name.getText().toString());
+            String imgUrl = null;
+            if (newProductsModel != null) imgUrl = newProductsModel.getImg_url();
+            if (popularProductsmodel != null) imgUrl = popularProductsmodel.getImg_url();
+            if (showAllModel != null) imgUrl = showAllModel.getImg_url();
+            intent.putExtra("product_image", imgUrl);
+            try {
+                intent.putExtra("product_price", Integer.parseInt(price.getText().toString().trim()));
+            } catch (NumberFormatException ignored) {
+            }
+            startActivity(intent);
         });
 
     }

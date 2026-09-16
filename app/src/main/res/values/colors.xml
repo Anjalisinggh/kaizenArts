@@ -16,5 +16,18 @@
     <color name="AppBarStyle">#D348EB</color>
     <color name="lavender">#8692f7</color>
 
+    <!-- Onboarding atelier palette -->
+    <color name="onboard_ink">#14202B</color>
+    <color name="onboard_ink_soft">#5A6670</color>
+    <color name="onboard_teal">#0D4F4C</color>
+    <color name="onboard_gold">#C4A574</color>
+    <color name="onboard_mist">#F4F1EC</color>
+    <color name="onboard_cream">#F8F5F0</color>
+
+    <!-- Atelier palette extensions (shared app-wide) -->
+    <color name="atelier_gold_deep">#9C7C4E</color>
+    <color name="atelier_line">#1A14202B</color>
+    <color name="atelier_line_soft">#0F14202B</color>
+    <color name="atelier_scrim">#CC14202B</color>
 
 </resources>

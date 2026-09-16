@@ -47,9 +47,6 @@ public class cartActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.my_cart_toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
         toolbar.setNavigationOnClickListener(view -> finish());
 
         overAllAmount = findViewById(R.id.textView3);

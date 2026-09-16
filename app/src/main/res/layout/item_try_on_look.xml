@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="88dp"
+    android:layout_height="112dp"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/bg_placeholder_navy"
+    android:scaleType="centerCrop" />

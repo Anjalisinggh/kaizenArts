@@ -1,68 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
     android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:orientation="vertical">
 
-    android:padding="5dp">
-    <androidx.cardview.widget.CardView
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:background="@drawable/bg_placeholder_navy">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_nam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp">
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/amethysta"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Product Name"
+        android:textColor="@color/onboard_ink"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="15dp"
+            android:fontFamily="@font/poppins"
+            android:text="₹ "
+            android:textColor="@color/atelier_gold_deep"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
-            android:orientation="vertical"
-            android:background="#F8E5E5">
-
-            <ImageView
-                android:id="@+id/item_image"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
-
-
-
-            <TextView
-                android:id="@+id/item_nam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:maxLength="19"
-                android:textColor="@color/black"
-                android:text="Woman T shirt"
-                android:fontFamily="@font/poppins"/>
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:orientation="horizontal"
-               android:layout_gravity="left"
-               >
-            <TextView
-                android:textColor="#15121D"
-                android:fontFamily="@font/poppins"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text="RS " />
-            <TextView
-                android:textColor="#15121D"
-                android:fontFamily="@font/poppins"
-                android:id="@+id/item_cost"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text=" 34.0" />
-           </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/item_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="0"
+            android:textColor="@color/atelier_gold_deep"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </LinearLayout>

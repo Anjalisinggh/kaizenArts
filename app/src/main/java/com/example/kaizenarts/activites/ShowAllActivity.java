@@ -39,9 +39,6 @@ public class ShowAllActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.show_all_toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

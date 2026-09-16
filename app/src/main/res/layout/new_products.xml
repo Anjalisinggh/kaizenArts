@@ -1,95 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="130dp"
+    android:layout_width="148dp"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:padding="5dp"
-    android:background="#FFFFFF"
-    app:cardCornerRadius="5dp">
+    android:layout_marginEnd="14dp"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F9F5F0">
+        android:layout_height="176dp"
+        android:background="@drawable/bg_placeholder_teal">
 
         <ImageView
             android:id="@+id/new_img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/milk"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#F66F6F"
+            android:layout_gravity="top|start"
+            android:layout_margin="9dp"
+            android:background="@color/onboard_ink"
             android:fontFamily="@font/poppins"
-            android:padding="6dp"
-            android:text="New"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/new_img"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.1" />
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:letterSpacing="0.08"
+            android:text="NEW"
+            android:textColor="@color/onboard_gold"
+            android:textSize="9sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/new_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/amethysta"
+        android:text="Product Name"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:textColor="@color/onboard_ink" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/new_product_name"
+            android:id="@+id/dollar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             android:fontFamily="@font/poppins"
-            android:gravity="center"
-            android:text="Product Name"
-            android:textSize="14sp"
-            android:maxLength="7"
-            android:textColor="#1E1E1E"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/new_img" />
+            android:text="₹ "
+            android:textColor="@color/atelier_gold_deep"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/new_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/new_product_name"
-            app:layout_constraintStart_toStartOf="@+id/new_product_name"
-            app:layout_constraintTop_toBottomOf="@+id/new_product_name">
-
-            <TextView
-                android:id="@+id/dollar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text=" ₹ "
-                android:textColor="#212322"
-                android:textSize="14sp"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/new_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="90"
-                android:textColor="#242624"
-                android:textSize="14dp"
-
-                app:layout_constraintBottom_toBottomOf="@+id/dollar"
-                app:layout_constraintStart_toEndOf="@+id/dollar"
-                app:layout_constraintTop_toTopOf="@+id/dollar" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+            android:fontFamily="@font/poppins"
+            android:text="90"
+            android:textColor="@color/atelier_gold_deep"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="52dp"
+    android:layout_height="52dp"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/bg_earring_swatch">
+
+    <ImageView
+        android:id="@+id/style_icon"
+        android:layout_width="22dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_earring_drop" />
+</FrameLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/onboard_mist">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="110dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/amethysta"
+            android:text="Your Style"
+            android:textColor="@color/onboard_ink"
+            android:textSize="26sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/bg_try_on_fab">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_nav_profile" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Guest"
+                    android:textColor="@color/onboard_ink"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Not signed in"
+                    android:textColor="@color/onboard_ink_soft"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/amethysta"
+                android:text="Your Try-On Looks"
+                android:textColor="@color/onboard_ink"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profile_looks_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:minHeight="112dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+
+        <TextView
+            android:id="@+id/profile_looks_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Looks you save from Try-On will appear here."
+            android:textColor="@color/onboard_ink_soft"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/atelier_line" />
+
+        <LinearLayout
+            android:id="@+id/row_orders"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Orders" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_wishlist"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Wishlist" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_saved_looks"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Saved Looks" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_try_on_history"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Try-On History" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_recently_viewed"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Recently Viewed" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_addresses"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Addresses" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_payment"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Payment" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_notifications"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Notifications" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_settings"
+            style="@style/ProfileRow">
+            <TextView style="@style/ProfileRowLabel" android:text="Settings" />
+            <ImageView style="@style/ProfileRowChevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_sign_out"
+            style="@style/ProfileRow">
+            <TextView
+                style="@style/ProfileRowLabel"
+                android:text="Sign Out"
+                android:textColor="@color/atelier_gold_deep" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

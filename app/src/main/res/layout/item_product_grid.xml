@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:background="@drawable/bg_placeholder_teal">
+
+        <ImageView
+            android:id="@+id/grid_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:id="@+id/grid_wishlist_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_icon_chip">
+
+            <ImageView
+                android:id="@+id/grid_wishlist_icon"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_nav_wishlist_outline" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/grid_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/amethysta"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Product Name"
+        android:textColor="@color/onboard_ink"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/grid_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="italic"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Description"
+        android:textColor="@color/onboard_ink_soft"
+        android:textSize="10.5sp" />
+
+    <TextView
+        android:id="@+id/grid_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="₹ 0"
+        android:textColor="@color/atelier_gold_deep"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

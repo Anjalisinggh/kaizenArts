@@ -2,11 +2,9 @@ package com.example.kaizenarts.activites;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,64 +14,91 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.kaizenarts.R;
 import com.example.kaizenarts.adapters.SliderAdapter;
+import com.google.android.material.button.MaterialButton;
 
 public class onBoardingActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private LinearLayout dotsLayout;
-    private Button btn;
+    private MaterialButton btn;
+    private TextView skipBtn;
     private SliderAdapter sliderAdapter;
-    private TextView[] dots;
+    private View[] indicators;
     private Animation animation;
+    private int currentPage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding);
 
-        // Hide Action Bar (Prevents potential crashes)
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
 
-        // Initialize Views
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.onboard_mist));
+
         viewPager = findViewById(R.id.slider);
         dotsLayout = findViewById(R.id.dots);
         btn = findViewById(R.id.get_started_btn);
+        skipBtn = findViewById(R.id.skip_btn);
 
-        // Ensure button is initially hidden
-        btn.setVisibility(View.INVISIBLE);
-
-        // Setup ViewPager and Adapter
         sliderAdapter = new SliderAdapter(this);
         viewPager.setAdapter(sliderAdapter);
 
-        // Add Dots for navigation
-        addDots(0);
+        addIndicators(0);
         viewPager.addOnPageChangeListener(changeListener);
 
-        // Handle Button Click
         btn.setOnClickListener(v -> {
-            startActivity(new Intent(onBoardingActivity.this, MainActivity.class));
-            finish();
+            if (currentPage < sliderAdapter.getCount() - 1) {
+                viewPager.setCurrentItem(currentPage + 1, true);
+            } else {
+                finishOnboarding();
+            }
         });
+
+        skipBtn.setOnClickListener(v -> finishOnboarding());
     }
 
-    private void addDots(int position) {
-        dots = new TextView[3]; // Update this if slide count changes
+    private void finishOnboarding() {
+        startActivity(new Intent(onBoardingActivity.this, MainActivity.class));
+        finish();
+    }
+
+    private void addIndicators(int position) {
+        indicators = new View[3];
         dotsLayout.removeAllViews();
 
-        for (int i = 0; i < dots.length; i++) {
-            dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226;"));  // Bullet point
-            dots[i].setTextSize(35);
-            dots[i].setTextColor(ContextCompat.getColor(this, R.color.pink));  // Default color
-            dotsLayout.addView(dots[i]);
+        for (int i = 0; i < indicators.length; i++) {
+            View indicator = new View(this);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    dp(i == position ? 36 : 18),
+                    dp(3)
+            );
+            params.setMargins(dp(4), 0, dp(4), 0);
+            indicator.setLayoutParams(params);
+            indicator.setBackgroundResource(
+                    i == position
+                            ? R.drawable.indicator_onboarding_active
+                            : R.drawable.indicator_onboarding_inactive
+            );
+            indicators[i] = indicator;
+            dotsLayout.addView(indicator);
         }
+    }
 
-        // Ensure position is valid before modifying the array
-        if (dots.length > 0 && position < dots.length) {
-            dots[position].setTextColor(ContextCompat.getColor(this, R.color.white));  // Highlight current dot
+    private int dp(int value) {
+        return Math.round(value * getResources().getDisplayMetrics().density);
+    }
+
+    private void updatePrimaryButton(int position) {
+        boolean isLast = position == sliderAdapter.getCount() - 1;
+        btn.setText(isLast ? R.string.onboard_start : R.string.onboard_next);
+        skipBtn.setVisibility(isLast ? View.INVISIBLE : View.VISIBLE);
+
+        if (isLast) {
+            animation = AnimationUtils.loadAnimation(this, R.anim.fade_in_up);
+            btn.startAnimation(animation);
         }
     }
 
@@ -84,15 +109,9 @@ public class onBoardingActivity extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
-            addDots(position);
-
-            if (position == 2) {  // Last slide
-                animation = AnimationUtils.loadAnimation(onBoardingActivity.this, R.anim.slide_animation);
-                btn.setAnimation(animation);
-                btn.setVisibility(View.VISIBLE);
-            } else {
-                btn.setVisibility(View.INVISIBLE);
-            }
+            currentPage = position;
+            addIndicators(position);
+            updatePrimaryButton(position);
         }
 
         @Override

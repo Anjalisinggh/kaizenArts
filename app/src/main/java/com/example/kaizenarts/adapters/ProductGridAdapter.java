@@ -61,8 +61,8 @@ public class ProductGridAdapter extends RecyclerView.Adapter<ProductGridAdapter.
         boolean saved = savedNames.contains(product.getName());
         holder.wishlistIcon.setImageResource(saved ? R.drawable.ic_nav_wishlist_filled : R.drawable.ic_nav_wishlist_outline);
         holder.wishlistIcon.setColorFilter(saved
-                ? context.getResources().getColor(R.color.onboard_gold)
-                : context.getResources().getColor(R.color.onboard_cream));
+                ? context.getResources().getColor(R.color.color_gold)
+                : context.getResources().getColor(R.color.color_champagne));
 
         holder.wishlistBtn.setOnClickListener(v -> {
             boolean nowSaved = !savedNames.contains(product.getName());

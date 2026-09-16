@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/onboard_mist"
+    android:background="@color/color_ivory"
     android:orientation="vertical">
 
     <TextView
@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/amethysta"
+        android:fontFamily="@font/playfair_display_variable"
         android:text="Discover"
-        android:textColor="@color/onboard_ink"
+        android:textColor="@color/color_espresso"
         android:textSize="26sp" />
 
     <LinearLayout
@@ -41,10 +41,10 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:hint="Search earrings, styles, occasions"
-            android:textColorHint="@color/onboard_ink_soft"
-            android:textColor="@color/onboard_ink"
+            android:textColorHint="@color/color_warm_gray"
+            android:textColor="@color/color_espresso"
             android:textSize="12.5sp"
             android:singleLine="true"
             android:imeOptions="actionSearch" />
@@ -68,13 +68,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="9dp"
                 android:background="@drawable/bg_chip_filled"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:paddingStart="15dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="15dp"
                 android:paddingBottom="8dp"
                 android:text="Style"
-                android:textColor="@color/onboard_gold"
+                android:textColor="@color/color_gold"
                 android:textSize="11sp" />
 
             <TextView
@@ -82,13 +82,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="9dp"
                 android:background="@drawable/bg_chip_outline"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:paddingStart="15dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="15dp"
                 android:paddingBottom="8dp"
                 android:text="Material"
-                android:textColor="@color/onboard_ink_soft"
+                android:textColor="@color/color_warm_gray"
                 android:textSize="11sp" />
 
             <TextView
@@ -96,13 +96,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="9dp"
                 android:background="@drawable/bg_chip_outline"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:paddingStart="15dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="15dp"
                 android:paddingBottom="8dp"
                 android:text="Price"
-                android:textColor="@color/onboard_ink_soft"
+                android:textColor="@color/color_warm_gray"
                 android:textSize="11sp" />
 
             <TextView
@@ -110,26 +110,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="9dp"
                 android:background="@drawable/bg_chip_outline"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:paddingStart="15dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="15dp"
                 android:paddingBottom="8dp"
                 android:text="Occasion"
-                android:textColor="@color/onboard_ink_soft"
+                android:textColor="@color/color_warm_gray"
                 android:textSize="11sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_chip_outline"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:paddingStart="15dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="15dp"
                 android:paddingBottom="8dp"
                 android:text="Rating"
-                android:textColor="@color/onboard_ink_soft"
+                android:textColor="@color/color_warm_gray"
                 android:textSize="11sp" />
         </LinearLayout>
     </HorizontalScrollView>

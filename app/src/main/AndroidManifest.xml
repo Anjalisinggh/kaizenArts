@@ -77,6 +77,10 @@
             android:name=".activites.TryOnResultActivity"
             android:exported="false"
             android:theme="@style/Theme.KaizenArts" />
+        <activity
+            android:name=".activites.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KaizenArts" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

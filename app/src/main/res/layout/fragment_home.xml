@@ -4,18 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/onboard_mist"
+    android:background="@color/color_ivory"
     tools:context=".fragments.HomeFragment">
 
     <LinearLayout
         android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/onboard_mist"
+        android:background="@color/color_ivory"
         android:orientation="vertical"
         android:paddingBottom="28dp">
 
-        <!-- Wordmark row -->
+        <!-- Header: wordmark + search / account / cart -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:orientation="horizontal"
             android:paddingStart="20dp"
             android:paddingTop="18dp"
-            android:paddingEnd="20dp"
+            android:paddingEnd="16dp"
             android:paddingBottom="10dp">
 
             <TextView
@@ -32,30 +32,135 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/aguafina_script"
                 android:text="@string/app_name"
-                android:textColor="@color/onboard_ink"
+                android:textColor="@color/color_espresso"
                 android:textSize="24sp" />
 
             <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:id="@+id/home_search_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="9dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_search"
+                app:tint="@color/color_espresso" />
+
+            <ImageView
+                android:id="@+id/home_account_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="9dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_nav_profile"
+                app:tint="@color/color_espresso" />
+
+            <ImageView
+                android:id="@+id/home_bag_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="9dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_bag_outline"
-                app:tint="@color/onboard_ink" />
+                app:tint="@color/color_espresso" />
         </LinearLayout>
 
-        <!-- Image Slider (hero) -->
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
+        <!-- Editorial hero -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="460dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_hero_editorial">
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/image_slider"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            app:iss_auto_cycle="true"
-            app:iss_period="4000"
-            app:iss_delay="1000"
-            app:iss_text_align="CENTER" />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="40dp"
+                android:alpha="0.9"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_earring_chandbali"
+                app:tint="@color/color_gold_light" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_hero_scrim" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:letterSpacing="0.22"
+                    android:text="THE EVERYDAY EDIT"
+                    android:textColor="@color/color_gold_light"
+                    android:textSize="9.5sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/playfair_display_variable"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Jewelry that feels\nlike you."
+                    android:textColor="@color/color_ivory"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Discover pieces made to complete your everyday."
+                    android:textColor="#C7BFB6"
+                    android:textSize="12.5sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/home_shop_collection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_ivory"
+                        android:fontFamily="@font/inter_variable"
+                        android:gravity="center"
+                        android:letterSpacing="0.08"
+                        android:padding="13dp"
+                        android:text="SHOP COLLECTION"
+                        android:textColor="@color/color_espresso"
+                        android:textSize="10.5sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_try_it_on"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_outline_gold"
+                        android:fontFamily="@font/inter_variable"
+                        android:gravity="center"
+                        android:letterSpacing="0.08"
+                        android:padding="13dp"
+                        android:text="TRY IT ON"
+                        android:textColor="@color/color_gold_light"
+                        android:textSize="10.5sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
 
         <!-- Category Section -->
         <LinearLayout
@@ -70,20 +175,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/playfair_display_variable"
                 android:text="Shop by Style"
                 android:textSize="20sp"
-                android:textColor="@color/onboard_ink" />
+                android:textColor="@color/color_espresso" />
 
             <TextView
                 android:id="@+id/category_see_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:letterSpacing="0.06"
                 android:text="SEE ALL"
-                android:textColor="@color/onboard_ink_soft"
+                android:textColor="@color/color_warm_gray"
                 android:textSize="10sp" />
         </LinearLayout>
 
@@ -115,20 +220,20 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/amethysta"
+                    android:fontFamily="@font/playfair_display_variable"
                     android:text="New Arrivals"
                     android:textSize="20sp"
-                    android:textColor="@color/onboard_ink" />
+                    android:textColor="@color/color_espresso" />
 
                 <TextView
                     android:id="@+id/newProducts_see_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/inter_variable"
                     android:letterSpacing="0.06"
                     android:text="SEE ALL"
-                    android:textColor="@color/onboard_ink_soft"
+                    android:textColor="@color/color_warm_gray"
                     android:textSize="10sp" />
             </LinearLayout>
 
@@ -161,10 +266,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/amethysta"
+                    android:fontFamily="@font/playfair_display_variable"
                     android:textStyle="italic"
                     android:text="Your kind of sparkle"
-                    android:textColor="@color/onboard_ink"
+                    android:textColor="@color/color_espresso"
                     android:textSize="20sp" />
 
                 <TextView
@@ -172,10 +277,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/inter_variable"
                     android:letterSpacing="0.06"
                     android:text="SEE ALL"
-                    android:textColor="@color/onboard_ink_soft"
+                    android:textColor="@color/color_warm_gray"
                     android:textSize="10sp" />
             </LinearLayout>
 

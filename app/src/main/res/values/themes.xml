@@ -2,20 +2,20 @@
     <!-- Base application theme -->
     <style name="Base.Theme.KaizenArts" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary Colors -->
-        <item name="colorPrimary">@color/onboard_ink</item>
-        <item name="colorPrimaryDark">@color/onboard_ink</item>
-        <item name="colorOnPrimary">@color/onboard_cream</item>
+        <item name="colorPrimary">@color/color_espresso</item>
+        <item name="colorPrimaryDark">@color/color_espresso</item>
+        <item name="colorOnPrimary">@color/color_champagne</item>
 
         <!-- Secondary / accent -->
-        <item name="colorSecondary">@color/onboard_gold</item>
-        <item name="colorSecondaryVariant">@color/atelier_gold_deep</item>
-        <item name="colorOnSecondary">@color/onboard_ink</item>
-        <item name="colorAccent">@color/onboard_gold</item>
+        <item name="colorSecondary">@color/color_gold</item>
+        <item name="colorSecondaryVariant">@color/color_gold_deep</item>
+        <item name="colorOnSecondary">@color/color_espresso</item>
+        <item name="colorAccent">@color/color_gold</item>
 
-        <item name="android:statusBarColor">@color/onboard_mist</item>
+        <item name="android:statusBarColor">@color/color_ivory</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/onboard_cream</item>
-        <item name="android:windowBackground">@color/onboard_mist</item>
+        <item name="android:navigationBarColor">@color/color_champagne</item>
+        <item name="android:windowBackground">@color/color_ivory</item>
 
         <!-- App Bar Styling -->
         <item name="actionBarStyle">@style/AppBarStyle</item>
@@ -26,9 +26,9 @@
 
     <!-- App Bar Styling -->
     <style name="AppBarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
-        <item name="android:background">@color/onboard_mist</item>
-        <item name="titleTextColor">@color/onboard_ink</item>
-        <item name="subtitleTextColor">@color/onboard_ink_soft</item>
+        <item name="android:background">@color/color_ivory</item>
+        <item name="titleTextColor">@color/color_espresso</item>
+        <item name="subtitleTextColor">@color/color_warm_gray</item>
     </style>
 
 </resources>

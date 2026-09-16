@@ -24,6 +24,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.example.kaizenarts.R;
+import com.example.kaizenarts.data.WishlistRepository;
 import com.example.kaizenarts.models.NewProductsModel;
 import com.example.kaizenarts.models.PopularProductsmodel;
 import com.example.kaizenarts.models.ShowAllModel;
@@ -55,6 +56,8 @@ public class DetailedActivity extends AppCompatActivity {
     //show all
     FirebaseAuth auth;
     private FirebaseFirestore firestore;
+    private final WishlistRepository wishlistRepository = new WishlistRepository();
+    private boolean isWishlisted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -220,6 +223,26 @@ public class DetailedActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.detailed_cart_btn).setOnClickListener(v ->
+                startActivity(new Intent(DetailedActivity.this, cartActivity.class)));
+
+        ImageView wishlistIcon = findViewById(R.id.detailed_wishlist_icon);
+        findViewById(R.id.detailed_wishlist_btn).setOnClickListener(v -> {
+            ShowAllModel current = currentAsShowAllModel();
+            if (current == null || current.getName() == null) return;
+            isWishlisted = !isWishlisted;
+            wishlistIcon.setImageResource(isWishlisted
+                    ? R.drawable.ic_nav_wishlist_filled : R.drawable.ic_nav_wishlist_outline);
+            wishlistIcon.setColorFilter(getResources().getColor(
+                    isWishlisted ? R.color.color_gold : R.color.color_ivory));
+            if (isWishlisted) {
+                wishlistRepository.add(current);
+                Toast.makeText(this, "Saved to wishlist", Toast.LENGTH_SHORT).show();
+            } else {
+                wishlistRepository.remove(current.getName());
+            }
+        });
+
         findViewById(R.id.try_on_button).setOnClickListener(v -> {
             Intent intent = new Intent(DetailedActivity.this, TryOnActivity.class);
             intent.putExtra("product_name", name.getText().toString());
@@ -287,5 +310,19 @@ public class DetailedActivity extends AppCompatActivity {
 
     public boolean isUserLoggedIn() {
         return auth.getCurrentUser() != null;
+    }
+
+    /** Normalizes whichever product model was passed in for use with the shared wishlist. */
+    private ShowAllModel currentAsShowAllModel() {
+        if (showAllModel != null) return showAllModel;
+        if (newProductsModel != null) {
+            return new ShowAllModel(newProductsModel.getDescription(), newProductsModel.getName(),
+                    newProductsModel.getRating(), newProductsModel.getPrice(), newProductsModel.getImg_url(), null);
+        }
+        if (popularProductsmodel != null) {
+            return new ShowAllModel(popularProductsmodel.getDescription(), popularProductsmodel.getName(),
+                    popularProductsmodel.getRating(), popularProductsmodel.getPrice(), popularProductsmodel.getImg_url(), null);
+        }
+        return null;
     }
 }

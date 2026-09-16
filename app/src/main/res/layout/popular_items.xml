@@ -23,11 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
-        android:fontFamily="@font/amethysta"
+        android:fontFamily="@font/playfair_display_variable"
         android:maxLines="1"
         android:ellipsize="end"
         android:text="Product Name"
-        android:textColor="@color/onboard_ink"
+        android:textColor="@color/color_espresso"
         android:textSize="13sp" />
 
     <LinearLayout
@@ -40,9 +40,9 @@
             android:id="@+id/dollar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:text="₹ "
-            android:textColor="@color/atelier_gold_deep"
+            android:textColor="@color/color_gold_deep"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -50,9 +50,9 @@
             android:id="@+id/all_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:text="90"
-            android:textColor="@color/atelier_gold_deep"
+            android:textColor="@color/color_gold_deep"
             android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>

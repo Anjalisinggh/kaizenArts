@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/onboard_ink">
+    android:background="@color/color_espresso">
 
     <androidx.camera.view.PreviewView
         android:id="@+id/camera_preview"
@@ -29,7 +29,7 @@
         android:id="@+id/permission_prompt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/onboard_ink"
+        android:background="@color/color_espresso"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingStart="40dp"
@@ -39,11 +39,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/amethysta"
+            android:fontFamily="@font/playfair_display_variable"
             android:textStyle="italic"
             android:gravity="center"
             android:text="Kaizen Arts needs camera access to try earrings on"
-            android:textColor="@color/onboard_cream"
+            android:textColor="@color/color_champagne"
             android:textSize="16sp" />
 
         <TextView
@@ -52,13 +52,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg_btn_gold"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:paddingStart="22dp"
             android:paddingTop="12dp"
             android:paddingEnd="22dp"
             android:paddingBottom="12dp"
             android:text="ALLOW CAMERA"
-            android:textColor="@color/onboard_ink"
+            android:textColor="@color/color_espresso"
             android:textSize="11sp" />
     </LinearLayout>
 
@@ -90,11 +90,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/amethysta"
+            android:fontFamily="@font/playfair_display_variable"
             android:gravity="center"
             android:letterSpacing="0.1"
             android:text="TRY IT ON"
-            android:textColor="@color/onboard_cream"
+            android:textColor="@color/color_champagne"
             android:textSize="14sp" />
 
         <FrameLayout
@@ -121,13 +121,13 @@
         android:layout_gravity="top|center_horizontal"
         android:layout_marginTop="78dp"
         android:background="@drawable/bg_icon_chip_pill"
-        android:fontFamily="@font/poppins"
+        android:fontFamily="@font/inter_variable"
         android:paddingStart="14dp"
         android:paddingTop="8dp"
         android:paddingEnd="14dp"
         android:paddingBottom="8dp"
         android:text="Position your face inside the frame"
-        android:textColor="@color/onboard_cream"
+        android:textColor="@color/color_champagne"
         android:textSize="11sp" />
 
     <!-- Product chip -->
@@ -160,18 +160,18 @@
                 android:id="@+id/try_on_product_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/playfair_display_variable"
                 android:text="Noor Chandbali Drops"
-                android:textColor="@color/onboard_cream"
+                android:textColor="@color/color_champagne"
                 android:textSize="12.5sp" />
 
             <TextView
                 android:id="@+id/try_on_product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter_variable"
                 android:text="₹ 11,200"
-                android:textColor="@color/onboard_gold"
+                android:textColor="@color/color_gold"
                 android:textSize="11sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -181,14 +181,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_btn_outline_gold"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:letterSpacing="0.05"
             android:paddingStart="10dp"
             android:paddingTop="7dp"
             android:paddingEnd="10dp"
             android:paddingBottom="7dp"
             android:text="ADD TO BAG"
-            android:textColor="@color/onboard_gold"
+            android:textColor="@color/color_gold"
             android:textSize="9sp" />
     </LinearLayout>
 

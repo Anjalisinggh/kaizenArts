@@ -4,7 +4,11 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.kaizenarts.activites.MainActivity;
+import com.example.kaizenarts.activites.ProfileActivity;
 import com.example.kaizenarts.activites.ShowAllActivity;
+import com.example.kaizenarts.activites.TryOnActivity;
+import com.example.kaizenarts.activites.cartActivity;
 import com.example.kaizenarts.adapters.NewProductsAdapter;
 import com.example.kaizenarts.adapters.PopularProductsAdapter;
 import com.example.kaizenarts.models.NewProductsModel;
@@ -23,9 +27,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.constants.ScaleTypes;
-import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.kaizenarts.R;
 import com.example.kaizenarts.adapters.CategoryAdapter;
 import com.example.kaizenarts.models.CategoryModel;
@@ -92,8 +93,20 @@ public class HomeFragment extends Fragment {
         newProductShowAll.setOnClickListener(seeAllClickListener);
         popularShowAll.setOnClickListener(seeAllClickListener);
 
-        // Setup Image Slider
-        setupImageSlider(root);
+        // Header + hero actions
+        root.findViewById(R.id.home_search_icon).setOnClickListener(v -> {
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).goToTab(MainActivity.tabExplore());
+            }
+        });
+        root.findViewById(R.id.home_account_icon).setOnClickListener(v ->
+                startActivity(new Intent(getContext(), ProfileActivity.class)));
+        root.findViewById(R.id.home_bag_icon).setOnClickListener(v ->
+                startActivity(new Intent(getContext(), cartActivity.class)));
+        root.findViewById(R.id.home_shop_collection).setOnClickListener(v ->
+                startActivity(new Intent(getContext(), ShowAllActivity.class)));
+        root.findViewById(R.id.home_try_it_on).setOnClickListener(v ->
+                startActivity(new Intent(getContext(), TryOnActivity.class)));
 
         // Setup RecyclerViews
         setupCategoryRecyclerView();
@@ -101,18 +114,6 @@ public class HomeFragment extends Fragment {
         setupPopularProductsRecyclerView();
 
         return root;
-    }
-
-    private void setupImageSlider(View root) {
-        ImageSlider imageSlider = root.findViewById(R.id.image_slider);
-        if (imageSlider != null) {
-            List<SlideModel> slideModels = new ArrayList<>();
-            slideModels.add(new SlideModel(R.drawable.banner11, "Upto 70% Discount on Earrings", ScaleTypes.FIT));
-            slideModels.add(new SlideModel(R.drawable.banner22, "Huge Discount on Bangles", ScaleTypes.FIT));
-            slideModels.add(new SlideModel(R.drawable.banner33, "Discount on these lovely Chokers", ScaleTypes.FIT));
-
-            imageSlider.setImageList(slideModels, ScaleTypes.FIT);
-        }
     }
 
     private void setupCategoryRecyclerView() {

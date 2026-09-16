@@ -2,7 +2,7 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/onboard_mist">
+    android:background="@color/color_ivory">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,9 +15,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/amethysta"
+            android:fontFamily="@font/playfair_display_variable"
             android:text="Your Style"
-            android:textColor="@color/onboard_ink"
+            android:textColor="@color/color_espresso"
             android:textSize="26sp" />
 
         <LinearLayout
@@ -50,9 +50,9 @@
                     android:id="@+id/profile_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/amethysta"
+                    android:fontFamily="@font/playfair_display_variable"
                     android:text="Guest"
-                    android:textColor="@color/onboard_ink"
+                    android:textColor="@color/color_espresso"
                     android:textSize="16sp" />
 
                 <TextView
@@ -60,9 +60,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/inter_variable"
                     android:text="Not signed in"
-                    android:textColor="@color/onboard_ink_soft"
+                    android:textColor="@color/color_warm_gray"
                     android:textSize="11sp" />
             </LinearLayout>
         </LinearLayout>
@@ -78,9 +78,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amethysta"
+                android:fontFamily="@font/playfair_display_variable"
                 android:text="Your Try-On Looks"
-                android:textColor="@color/onboard_ink"
+                android:textColor="@color/color_espresso"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -99,9 +99,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:text="Looks you save from Try-On will appear here."
-            android:textColor="@color/onboard_ink_soft"
+            android:textColor="@color/color_warm_gray"
             android:textSize="11sp"
             android:visibility="gone" />
 
@@ -111,7 +111,7 @@
             android:layout_marginTop="26dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:background="@color/atelier_line" />
+            android:background="@color/color_border" />
 
         <LinearLayout
             android:id="@+id/row_orders"
@@ -182,7 +182,7 @@
             <TextView
                 style="@style/ProfileRowLabel"
                 android:text="Sign Out"
-                android:textColor="@color/atelier_gold_deep" />
+                android:textColor="@color/color_gold_deep" />
         </LinearLayout>
 
     </LinearLayout>

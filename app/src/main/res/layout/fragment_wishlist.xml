@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/onboard_mist">
+    android:background="@color/color_ivory">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,9 +14,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/amethysta"
+            android:fontFamily="@font/playfair_display_variable"
             android:text="Your Wishlist"
-            android:textColor="@color/onboard_ink"
+            android:textColor="@color/color_espresso"
             android:textSize="26sp" />
 
         <TextView
@@ -26,9 +26,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="16dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:text="0 pieces saved"
-            android:textColor="@color/onboard_ink_soft"
+            android:textColor="@color/color_warm_gray"
             android:textSize="11.5sp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -57,26 +57,26 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_nav_wishlist_outline"
-            android:tint="@color/onboard_ink_soft" />
+            android:tint="@color/color_warm_gray" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:fontFamily="@font/amethysta"
+            android:fontFamily="@font/playfair_display_variable"
             android:textStyle="italic"
             android:text="Nothing saved yet"
-            android:textColor="@color/onboard_ink"
+            android:textColor="@color/color_espresso"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter_variable"
             android:gravity="center"
             android:text="Tap the heart on any piece to keep it here."
-            android:textColor="@color/onboard_ink_soft"
+            android:textColor="@color/color_warm_gray"
             android:textSize="11.5sp" />
     </LinearLayout>
 </FrameLayout>

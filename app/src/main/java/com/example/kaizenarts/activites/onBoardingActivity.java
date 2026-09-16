@@ -36,7 +36,7 @@ public class onBoardingActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.onboard_mist));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.color_ivory));
 
         viewPager = findViewById(R.id.slider);
         dotsLayout = findViewById(R.id.dots);

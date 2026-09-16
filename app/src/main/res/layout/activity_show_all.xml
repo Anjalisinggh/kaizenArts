@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@color/onboard_mist"
+    android:background="@color/color_ivory"
     android:layout_height="match_parent"
     tools:context=".activites.ShowAllActivity">
 
@@ -15,14 +15,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/onboard_mist"
+        android:background="@color/color_ivory"
         android:minHeight="?attr/actionBarSize"
         app:navigationIcon="@drawable/ic_back_ink"
         app:title="Discover"
-        app:titleTextColor="@color/onboard_ink" />
+        app:titleTextColor="@color/color_espresso" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="@color/onboard_mist"
+        android:background="@color/color_ivory"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
